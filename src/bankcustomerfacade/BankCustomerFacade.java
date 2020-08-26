@@ -11,8 +11,8 @@ public class BankCustomerFacade {
     private ArrayList<CustomerIf> customers = new ArrayList();
     
     public BankCustomerFacade() {
+        
         ArrayList<AccountIf> cust1Accounts = new ArrayList();
-       
         AccountIf acc = new BankAccount(111111);
         acc.deposit(500);
         cust1Accounts.add(acc);
