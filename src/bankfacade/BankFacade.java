@@ -20,7 +20,7 @@ public class BankFacade {
         BankCustomerFacade bankCustomerFacade = new BankCustomerFacade();
         AccountIf acc;
 
-        CustomerIf cust1 = bankCustomerFacade.getBankCustomer("John");
+        CustomerIf cust1 = bankCustomerFacade.getBankCustomer("Toon");
         System.out.println("Customer and account information");
         System.out.println("Name = " + cust1.getCustomerName());
         System.out.println("Has " + cust1.getNumAccounts() + " accounts");
@@ -34,7 +34,7 @@ public class BankFacade {
         bankCustomerFacade.doDeposit(1000,cust1,222222);
         System.out.println("Account Number: " + acc.getAccountNumber() + " has " + acc.getBalance());
 
-        ArrayList<AccountIf> accounts = bankCustomerFacade.getBankCustomer("John").getllAccounts();
+        ArrayList<AccountIf> accounts = bankCustomerFacade.getBankCustomer("Toon").getllAccounts();
         for(AccountIf account : accounts) {
             System.out.println("Account number " + account.getAccountNumber() + " has " + account.getBalance());
         }

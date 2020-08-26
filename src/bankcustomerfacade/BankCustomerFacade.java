@@ -18,7 +18,7 @@ public class BankCustomerFacade {
         acc = new BankAccount(222222);
         acc.deposit(1000);
         cust1Accounts.add(acc);
-        CustomerIf cust1 = new BankCustomer("John", cust1Accounts);
+        CustomerIf cust1 = new BankCustomer("Toon", cust1Accounts);
         customers.add(cust1);
 
         ArrayList<AccountIf> cust2Accounts = new ArrayList();
@@ -28,7 +28,7 @@ public class BankCustomerFacade {
         acc = new BankAccount(444444);
         acc.deposit(3000);
         cust2Accounts.add(acc);
-        CustomerIf cust2 = new BankCustomer("Wick", cust2Accounts);
+        CustomerIf cust2 = new BankCustomer("Cena", cust2Accounts);
         customers.add(cust2);
     }
 
