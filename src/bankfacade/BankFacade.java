@@ -32,7 +32,7 @@ public class BankFacade {
         acc = bankCustomerFacade.createAccount(12346,1000);
         cust1Accounts.add(acc);
 
-        CustomerIf cust1 = bankCustomerFacade.createCustomer("Snow", cust1Accounts);
+        CustomerIf cust1 = bankCustomerFacade.createCustomer("Toon_Bodyslam", cust1Accounts);
         System.out.println("Customer and account information");
         System.out.println("Name = " + cust1.getCustomerName());
         System.out.println("Has " + cust1.getNumAccounts() + " accounts");
@@ -46,7 +46,7 @@ public class BankFacade {
         bankCustomerFacade.doDeposit(1000,cust1,12346);
         System.out.println("Account Number: " + acc.getAccountNumber() + " has " + acc.getBalance());
 
-        ArrayList<AccountIf> accounts = bankCustomerFacade.getBankCustomer("Snow").getllAccounts();
+        ArrayList<AccountIf> accounts = bankCustomerFacade.getBankCustomer("Toon_Bodyslam").getllAccounts();
         for(AccountIf account : accounts) {
             System.out.println("Account number " + account.getAccountNumber() + " has " + account.getBalance());
         }
