@@ -18,7 +18,7 @@ public class BankCustomerFacade {
         acc = new BankAccount(222222);
         acc.deposit(1000);
         cust1Accounts.add(acc);
-        CustomerIf cust1 = new BankCustomer("Nueng", cust1Accounts);
+        CustomerIf cust1 = new BankCustomer("John", cust1Accounts);
         customers.add(cust1);
 
         ArrayList<AccountIf> cust2Accounts = new ArrayList();
@@ -28,7 +28,7 @@ public class BankCustomerFacade {
         acc = new BankAccount(444444);
         acc.deposit(3000);
         cust2Accounts.add(acc);
-        CustomerIf cust2 = new BankCustomer("Strong", cust2Accounts);
+        CustomerIf cust2 = new BankCustomer("Wick", cust2Accounts);
         customers.add(cust2);
     }
 
@@ -50,19 +50,4 @@ public class BankCustomerFacade {
 
         return null;
     }
-
-    // additional
-
-    public AccountIf createAccount(int accNo,int amt){
-        AccountIf acc = new BankAccount(accNo);
-        acc.deposit(amt);
-        return acc;
-    }
-
-     public CustomerIf createCustomer(String name, ArrayList<AccountIf> accounts){
-         CustomerIf cus = new BankCustomer(name, accounts);
-         customers.add(cus);
-         return cus;
-     }
-
 }
