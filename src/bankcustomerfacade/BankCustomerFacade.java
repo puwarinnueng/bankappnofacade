@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 
 public class BankCustomerFacade {
+   
     private ArrayList<CustomerIf> customers = new ArrayList();
     
     public BankCustomerFacade() {
@@ -33,15 +34,17 @@ public class BankCustomerFacade {
         customers.add(cust2);
     }
 
-
+    //ฝากเงินเข้าบัญชี//
     public void doDeposit(double amt, CustomerIf cust, int accNo){
         cust.getAccount(accNo).deposit(amt);
     }
 
+    //แสดงข้อมูลจากบัญชีเงินฝากของ//
     public AccountIf getBankAccount(CustomerIf cust, int accNo){
         return cust.getAccount(accNo);
     }
 
+    //แสดงข้อมูลของผู้ใช้//
     public CustomerIf getBankCustomer(String custName){
         for(CustomerIf cus : customers){
             if(cus.getCustomerName().equals(custName)){
